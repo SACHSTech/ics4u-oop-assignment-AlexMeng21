@@ -49,6 +49,4 @@ public class Song{
   public String getDate(){
     return date;
   }
-
-  
 }

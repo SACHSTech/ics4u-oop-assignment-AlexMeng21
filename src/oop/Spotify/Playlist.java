@@ -1,5 +1,6 @@
 package oop.Spotify;
 import java.io.*;
+import oop.Spotify.Song;
 
 public class Playlist{
   private String name;
@@ -11,9 +12,9 @@ public class Playlist{
     length = setLength;
   }
 
-  public void addSong(Song newSong, String listName){
+  public void addSong(Song newSong, Playlist listName){
     song = newSong;
-    put(Song , Playlist);
+    listName.put("Song" , newSong);
   }
 
   public String getName(){

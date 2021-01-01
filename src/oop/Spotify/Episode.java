@@ -1,5 +1,6 @@
 package oop.Spotify;
 import java.io.*;
+import oop.Spotify.Song;
 
 public class Episode extends Song{
   private String description;

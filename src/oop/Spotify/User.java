@@ -1,4 +1,4 @@
-package Spotify;
+package oop.Spotify;
 import java.io.*;
 
 public class User{

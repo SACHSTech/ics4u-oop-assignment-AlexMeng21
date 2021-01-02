@@ -1,5 +1,8 @@
 package oop.Spotify;
 import java.io.*;
+
+import javax.naming.NamingEnumeration;
+
 import oop.Spotify.Song;
 
 public class Playlist{
@@ -12,9 +15,22 @@ public class Playlist{
     length = setLength;
   }
 
+  //public String findLength(Playlist list){
+    //private String length;
+
+
+   // return length;
+ // }
+
+  public Song getSongs(Playlist list){
+    return NamingEnumeration.getIDs(list);
+
+    
+  }
+
   public void addSong(Song newSong, Playlist listName){
     song = newSong;
-    listName.put("Song" , newSong);
+    listName.put(newSong);
   }
 
   public String getName(){

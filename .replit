@@ -1,2 +1,2 @@
 language = "java10"
-run = "javac -d bin src/oop/Spotify/Song.java; javac -d bin src/oop/Spotify/Episode.java; javac -d bin src/oop/Spotify/Spotify.java; javac -d bin src/oop/Spotify/Playlist.java; java -cp bin oop.Spotify.Spotify"
+run = "javac -cp bin -d bin src/oop/Spotify/Song.java; javac -cp bin -d bin src/oop/Spotify/Episode.java; javac -cp bin -d bin src/oop/Spotify/Spotify.java; javac -cp bin -d bin src/oop/Spotify/Playlist.java; java -cp bin oop.Spotify.Spotify"

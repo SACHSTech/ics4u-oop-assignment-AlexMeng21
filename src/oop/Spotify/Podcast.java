@@ -5,10 +5,12 @@ import java.util.HashMap;
 
 public class Podcast extends Songlist{
   private String producer;
+  private String name;
+  private String length;
   private HashMap <String, Episode> Episodes = new HashMap<String, Episode>();
 
   public Podcast(String setName, String setProducer){
-    super(setName);
+    name = setName;
     producer = setProducer;
   }
 

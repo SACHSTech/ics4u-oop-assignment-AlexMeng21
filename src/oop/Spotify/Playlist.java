@@ -10,7 +10,7 @@ public class Playlist extends Songlist{
   private HashMap<String, Song> Songs = new HashMap<String, Song>();
 
   public Playlist(String setName, String setLength, HashMap SongList){
-    super(setName);
+    name = setName;
     length = setLength;
     Songs = SongList;
   }

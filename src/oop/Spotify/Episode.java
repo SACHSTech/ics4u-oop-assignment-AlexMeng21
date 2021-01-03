@@ -9,4 +9,8 @@ public class Episode extends Song{
     super(setName, setArtist, setLength, isfavourite, setAlbum, setDate);
     description = setDescription;
   }
+
+  public String getDescription(){
+    return description;
+  }
 }

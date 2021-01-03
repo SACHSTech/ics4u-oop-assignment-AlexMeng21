@@ -2,24 +2,18 @@ package oop.Spotify;
 import java.io.*;
 import java.util.HashMap;
 import oop.Spotify.Song;
+import oop.Spotify.Songlist;
 
-public class Playlist{
+public class Playlist extends Songlist{
   private String name;
   private String length;
   private HashMap<String, Song> Songs = new HashMap<String, Song>();
 
   public Playlist(String setName, String setLength, HashMap SongList){
-    name = setName;
+    super(setName);
     length = setLength;
     Songs = SongList;
   }
-
-  //public String findLength(Playlist list){
-    //private String length;
-
-
-   // return length;
- // }
 
   public HashMap getSongs(){
     return Songs;

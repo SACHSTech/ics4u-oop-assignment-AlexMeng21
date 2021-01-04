@@ -10,7 +10,7 @@ public class Spotify{
 
     Episode newEp = new Episode("newEp", "Sony", "03:30", false, "Podcast", "2021/01/03", "Description");
 
-    Playlist S = new Playlist("S", "00:00", Songs);
+    Playlist S = new Playlist("S");
 
     System.out.println(Believer);
 

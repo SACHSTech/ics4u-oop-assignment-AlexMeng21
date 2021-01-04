@@ -1,5 +1,6 @@
 package oop.Spotify;
 import java.io.*;
+import oop.Spotify.Favourite;
 
 public class Song{
   private String name;
@@ -18,11 +19,14 @@ public class Song{
     date = setDate;
   }
 
-  public void favorite(){
+  public void favourite(Song song){
+    if(favourite == false){
+      Favourite.addSong(song);
+    }
     favourite = true;
   }
 
-  public void unfavorite(){
+  public void unfavourite(){
     favourite = false;
   }
 

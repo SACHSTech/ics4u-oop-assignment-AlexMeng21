@@ -36,7 +36,7 @@ public class Podcast extends Songlist{
 
     TotalLength = 0;
     
-    for(Counter = 0; Counter < Songs.size(); Counter ++){
+    for(Counter = 0; Counter < Episodes.size(); Counter ++){
       episode = Episodes.get(Counter);
       SLength = episode.getLength();
       Minutes = Integer.parseInt(SLength.substring(0 , 2));

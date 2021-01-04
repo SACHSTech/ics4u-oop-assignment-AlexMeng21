@@ -1,22 +1,17 @@
 package oop.Spotify;
 import java.io.*;
 import java.util.ArrayList;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import oop.Spotify.Song;
 import oop.Spotify.Songlist;
 
 public class Playlist extends Songlist{
   private String name;
-  private String length;
+  private String length = "00:00";
   private int intCount = 0;
   private ArrayList<Song> Songs = new ArrayList<Song>();
-  private SimpleDateFormat Time = new SimpleDateFormat("mm:ss");
 
-  public Playlist(String setName, String setLength, ArrayList SongList){
+  public Playlist(String setName){
     name = setName;
-    length = setLength;
-    Songs = SongList;
   }
 
   public ArrayList getSongs(){

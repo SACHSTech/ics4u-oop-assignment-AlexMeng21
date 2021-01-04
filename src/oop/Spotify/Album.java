@@ -8,7 +8,7 @@ public class Album extends Songlist{
   private String name;
   private String length;
   private int intCount = 0;
-  private ArrayList <Song> songs = new ArrayList<Song>();
+  private ArrayList <Song> Songs = new ArrayList<Song>();
   
   public Album(String setName, String setArtist){
     name = setName;
@@ -23,12 +23,12 @@ public class Album extends Songlist{
   }
 
   public void addSong(String name, Song newSong){
-    songs.add(intCount, newSong);
+    Songs.add(intCount, newSong);
     intCount = intCount + 1;
   }
 
   public ArrayList getSongs(){
-    return songs;
+    return Songs;
   }
 
   public void findLength(){
@@ -44,7 +44,7 @@ public class Album extends Songlist{
     TotalLength = 0;
     
     for(Counter = 0; Counter < Songs.size(); Counter ++){
-      song = songs.get(Counter);
+      song = Songs.get(Counter);
       SLength = song.getLength();
       Minutes = Integer.parseInt(SLength.substring(0 , 2));
       Seconds = Integer.parseInt(SLength.substring(3 , 5)) + (Minutes * 60);
@@ -71,7 +71,7 @@ public class Album extends Songlist{
   }
 
   public String toString(){
-    return name + " " + artist + " " + length + " " + songs;
+    return name + " " + artist + " " + length + " " + Songs;
   } 
 
 }

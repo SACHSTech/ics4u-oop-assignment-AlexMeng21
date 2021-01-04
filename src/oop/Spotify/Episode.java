@@ -5,12 +5,40 @@ import oop.Spotify.Song;
 public class Episode extends Song{
   private String description;
 
-  public Episode(String setName, String setArtist, String setLength, boolean isfavourite, String setAlbum, String setDate, String setDescription){
-    super(setName, setArtist, setLength, isfavourite, setAlbum, setDate);
+  public Episode(String setName, String setProducer, String setLength, boolean isfavourite, String setPodcast, String setDate, String setDescription){
+    super(setName, setProducer, setLength, isfavourite, setPodcast, setDate);
     description = setDescription;
   }
 
   public String getDescription(){
     return description;
+  }
+
+  public String getName(){
+    return super.getName();
+  }
+
+  public String getProducer(){
+    return super.getArtist();
+  }
+
+  public String getLength(){
+    return super.getLength();
+  }
+
+  public boolean getFav(){
+    return super.getFav();
+  }
+
+  public String getPodcast(){
+    return super.getAlbum();
+  }
+
+  public String getDate(){
+    return super.getDate();
+  }
+
+  public String toString(){
+    return getName() + " " + getArtist() + " " + " " + getLength() + " " + getFav() + " " + getPodcast() + " " + getDate() + " " + getDescription();
   }
 }

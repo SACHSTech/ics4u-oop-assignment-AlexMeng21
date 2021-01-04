@@ -11,7 +11,7 @@ public class User{
 
   public User(String setUsername, String setPass){
     username = setUsername;
-    password = setpassword;
+    password = setPass;
   }
 
   public String getUsername(){

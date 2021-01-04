@@ -1,15 +1,16 @@
 package oop.Spotify;
 import oop.Spotify.Song;
 import oop.Spotify.Songlist;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Album extends Songlist{
   private String artist;
   private String name;
   private String length;
-  private HashMap <String, Song> songs = new HashMap<String, Song>();
+  private int intCount = 0;
+  private ArrayList <Song> songs = new ArrayList<Song>();
   
-  public Album(String setName, String setLength, String setArtist){
+  public Album(String setName, String setArtist){
     name = setName;
     artist = setArtist;
   }
@@ -22,11 +23,55 @@ public class Album extends Songlist{
   }
 
   public void addSong(String name, Song newSong){
-    songs.put(name, newSong);
+    songs.add(intCount, newSong);
+    intCount = intCount + 1;
   }
 
-  public HashMap getSongs(){
+  public ArrayList getSongs(){
     return songs;
   }
+
+  public void findLength(){
+    int TotalLength;
+    int Counter;
+    int Minutes;
+    int Seconds;
+    String strMin;
+    String strSec;
+    Song song;
+    String SLength;
+
+    TotalLength = 0;
+    
+    for(Counter = 0; Counter < Songs.size(); Counter ++){
+      song = songs.get(Counter);
+      SLength = song.getLength();
+      Minutes = Integer.parseInt(SLength.substring(0 , 2));
+      Seconds = Integer.parseInt(SLength.substring(3 , 5)) + (Minutes * 60);
+
+      TotalLength = TotalLength + Seconds;
+    }
+    
+    Minutes = (int)(TotalLength / 60);
+    Seconds = TotalLength % 60;
+    
+    strMin = Integer.toString(Minutes);
+    strSec = Integer.toString(Seconds);
+
+    if(strMin.length() < 2){
+      strMin = "0" + strMin;
+    }
+
+    if(strSec.length() < 2){
+      strSec = "0" + strSec;
+    }
+
+    length = strMin + ":" + strSec;
+    
+  }
+
+  public String toString(){
+    return name + " " + artist + " " + length + " " + songs;
+  } 
 
 }

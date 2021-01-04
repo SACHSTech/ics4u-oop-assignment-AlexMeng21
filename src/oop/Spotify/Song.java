@@ -49,4 +49,28 @@ public class Song{
   public String getDate(){
     return date;
   }
+
+  public void setName(String newName){
+    name = newName;
+  }
+
+  public void setArtist(String newArtist){
+    artist = newArtist;
+  }
+
+  public void setAlbum(String newAlbum){
+    album = newAlbum;
+  }
+
+  public void setDate(String newDate){
+    date = newDate;
+  }
+
+  public void setLength(String newLength){
+    length = newLength;
+  }
+
+  public String toString(){
+    return getName() + " " + getArtist() + " " + getLength() + " " + getFav() + " " + getAlbum() + " " + getDate();
+  }
 }

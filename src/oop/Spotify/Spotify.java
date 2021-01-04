@@ -1,13 +1,28 @@
 package oop.Spotify;
 import java.io.*;
+import java.util.ArrayList;
 
 public class Spotify{
   public static void main(String[] args) throws IOException{
-    
-    Song Believer;
-    Believer = new Song("Believer", "Imagine Dragons", "3:24", false, "Evolve", "12/30/2020");
+    ArrayList <Song> Songs = new ArrayList <Song>();
 
-    System.out.println(Believer.getName());
+    Song Believer = new Song("Believer", "Imagine Dragons", "03:24", false, "Evolve", "12/30/2020");
+
+    Episode newEp = new Episode("newEp", "Sony", "03:30", false, "Podcast", "2021/01/03", "Description");
+
+    Playlist S = new Playlist("S", "00:00", Songs);
+
+    System.out.println(Believer);
+
+    System.out.println(newEp);
+    System.out.println(S);
+
+    S.addSong(Believer);
+    S.addSong(Believer);
+
+    S.findLength();
+
+    System.out.println(S);
 
   }
 }

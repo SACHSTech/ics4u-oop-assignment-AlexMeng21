@@ -1,9 +1,9 @@
 package oop.Spotify;
 import oop.Spotify.Song;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.io.*;
 
 public abstract class Songlist{
 
-  public abstract HashMap getSongs();
+  public abstract ArrayList getSongs();
 }

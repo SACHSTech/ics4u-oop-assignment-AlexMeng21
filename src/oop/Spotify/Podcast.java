@@ -3,19 +3,19 @@ import oop.Spotify.Playlist;
 import oop.Spotify.Episode;
 import java.util.ArrayList;
 
-public class Podcast extends Songlist{
+public class Podcast extends Playlist{
   private String producer;
-  private String name;
-  private String length;
+  private String description;
   private int intCount = 0;
   private ArrayList <Episode> Episodes = new ArrayList <Episode>();
 
-  public Podcast(String setName, String setProducer){
-    name = setName;
+  public Podcast(String setName, String setProducer, String About){
+    super(setName);
     producer = setProducer;
+    description = About;
   }
 
-  public void addEpisode(String name, Episode newEp){
+  public void addEpisode(Episode newEp, Podcast series){
     Episodes.add(intCount, newEp);
     intCount = intCount + 1;
   }
@@ -24,43 +24,8 @@ public class Podcast extends Songlist{
     return Episodes;
   }
 
-  public void findLength(){
-    int TotalLength;
-    int Counter;
-    int Minutes;
-    int Seconds;
-    String strMin;
-    String strSec;
-    Song episode;
-    String SLength;
-
-    TotalLength = 0;
-    
-    for(Counter = 0; Counter < Episodes.size(); Counter ++){
-      episode = Episodes.get(Counter);
-      SLength = episode.getLength();
-      Minutes = Integer.parseInt(SLength.substring(0 , 2));
-      Seconds = Integer.parseInt(SLength.substring(3 , 5)) + (Minutes * 60);
-
-      TotalLength = TotalLength + Seconds;
-    }
-    
-    Minutes = (int)(TotalLength / 60);
-    Seconds = TotalLength % 60;
-    
-    strMin = Integer.toString(Minutes);
-    strSec = Integer.toString(Seconds);
-
-    if(strMin.length() < 2){
-      strMin = "0" + strMin;
-    }
-
-    if(strSec.length() < 2){
-      strSec = "0" + strSec;
-    }
-
-    length = strMin + ":" + strSec;
-    
+  public String findLength(){
+    return super.findLength();
   }
 
   public String getProducer(){
@@ -68,14 +33,19 @@ public class Podcast extends Songlist{
   }
 
   public String getName(){
-    return name;
+    return super.getName();
   }
 
-  public String getLength(){
-    return length;
+  public String getAbout(){
+    System.out.println("About: ");
+    return description;
+  }
+
+  public void Play(){
+    super.Play();
   }
 
   public String toString(){
-    return name + " " + length + " " + producer + " " + Episodes;
-  } 
+    return super.getName() + " " + super.findLength() + " " + producer + " " + Episodes;
+  }
 }

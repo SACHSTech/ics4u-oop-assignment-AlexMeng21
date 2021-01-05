@@ -5,28 +5,20 @@ import oop.Spotify.Playlist;
 import oop.Spotify.Song;
 
 public class Favourite extends Playlist{
-   private ArrayList <Song> Songs = new ArrayList <Song> ();
-
+  private ArrayList <Song> Songs = new ArrayList <Song> ();
   public Favourite(){
     super("Favourites");
   }
 
-  public void addSong(Song newSong){
-    super.addSong(newSong);
-    //newSong.favourite();
+  public ArrayList addSong(Song newSong, Favourite Favourites){
+    newSong.favourite(newSong, Favourites);
+    Songs = super.addSong(newSong);
+    Favourites.findLength();
+    return Songs;
   }
 
   public void removeSong(Song song){
-    int Counter;
-    Song check;
-
-    for(Counter = 0; Counter < Songs.size(); Counter ++){
-      check = Songs.get(Counter);
-      if(check == song){
-        Songs.remove(Counter);
-        break;
-      }
-    }
+    super.removeSong(song);
   }
 
   public String getName(){
@@ -35,5 +27,17 @@ public class Favourite extends Playlist{
 
   public ArrayList getSongs(){
     return super.getSongs();
+  }
+
+  public String findLength(){
+    return super.findLength();
+  }
+
+  public void Play(){
+    super.Play();
+  }
+
+  public String toString(){
+    return super.getName() + " " + super.findLength() + " " + Songs;
   }
 }

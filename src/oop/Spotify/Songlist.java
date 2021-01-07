@@ -3,9 +3,11 @@ import oop.Spotify.Song;
 import java.util.ArrayList;
 import java.io.*;
 
-// Songlist class
-// Parent to Playlist, Album, grandparent? lol to Favourite and Podcast
-// Contains most of the methods for child classes
+/**
+* Songlist class
+* Parent to Playlist, Album, grandparent? lol to Favourite and Podcast
+* Contains most of the methods for child classes
+*/
 
 public class Songlist{
   private String name;
@@ -95,7 +97,7 @@ public class Songlist{
 
     for (Counter = 0; Counter < Songs.size(); Counter ++) {
       System.out.println("Now Playing: " + Songs.get(Counter).getName());
-      
+
     }
 
   }

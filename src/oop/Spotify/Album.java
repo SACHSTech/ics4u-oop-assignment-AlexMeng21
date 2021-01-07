@@ -3,10 +3,12 @@ import oop.Spotify.Song;
 import oop.Spotify.Songlist;
 import java.util.ArrayList;
 
-// Album class
-// is a Songlist
-// Contains songs
-// Also has a set artist
+/** 
+* Album class
+* is a Songlist
+* Contains songs
+* Also has a set artist
+*/
 
 public class Album extends Songlist{
   private String artist;

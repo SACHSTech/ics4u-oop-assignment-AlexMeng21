@@ -4,10 +4,12 @@ import java.io.*;
 import oop.Spotify.Playlist;
 import oop.Spotify.Song;
 
-// Favourites Playlist
-// is a Playlist
-// Favourite is automatically made when creating a new User
-// Contains songs
+/**
+* Favourites Playlist
+* is a Playlist
+* Favourite is automatically made when creating a new User
+* Contains songs
+*/
 
 public class Favourite extends Playlist{
   public Favourite(){

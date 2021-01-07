@@ -5,9 +5,11 @@ import oop.Spotify.Song;
 import oop.Spotify.Playlist;
 import oop.Spotify.Favourite;
 
-// User class
-// Contains list of added Playlists, Albums, Podcasts, and has it's own Favourite object
-// Favourites playlist is created when a new user is made
+/** 
+* User class
+* Contains list of added Playlists, Albums, Podcasts, and has it's own Favourite object
+* Favourites playlist is created when a new user is made
+*/
 
 public class User{
   private String username;
@@ -109,7 +111,7 @@ public class User{
 
       if (check == series) {
         Podcasts.remove(Counter);
-        
+
       }
 
     }

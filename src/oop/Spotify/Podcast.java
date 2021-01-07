@@ -3,11 +3,13 @@ import oop.Spotify.Playlist;
 import oop.Spotify.Episode;
 import java.util.ArrayList;
 
-// Podcast class
-// is a Playlist
-// Uses arrayList to store Episodes
-// override addSong, getSongs, findLength
-// Has a producer and description
+/**
+* Podcast class
+* is a Playlist
+* Uses arrayList to store Episodes
+* override addSong, getSongs, findLength
+* Has a producer and description
+*/
 
 public class Podcast extends Playlist{
   private String producer;

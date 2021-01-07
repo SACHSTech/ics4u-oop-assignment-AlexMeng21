@@ -5,9 +5,11 @@ import oop.Spotify.Song;
 import oop.Spotify.Songlist;
 import oop.Spotify.User;
 
-// Playlist class
-// is a Songlist(Inherits a bunch of methods)
-// Contains songs
+/**
+* Playlist class
+* is a Songlist(Inherits a bunch of methods)
+* Contains songs
+*/
 
 public class Playlist extends Songlist{
 

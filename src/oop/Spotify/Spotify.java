@@ -2,15 +2,17 @@ package oop.Spotify;
 import java.io.*;
 import java.util.ArrayList;
 
-// Main Program Spotify.java
-// Demonstrate Functionality
-// Create User, Create Songs, Episodes, Playlists, Albums, Podcasts, etc
-// Print All Objects
-// Add Songs to Albums and Playlists
-// Add Episodes to Podcasts
-// Like Songs, then print Favourites
-// Add Playlists, Albums, Podcasts to User
-// Play Songs
+/** 
+* Main Program Spotify.java
+* Demonstrate Functionality
+* Create User, Create Songs, Episodes, Playlists, Albums, Podcasts, etc
+* Print All Objects
+* Add Songs to Albums and Playlists
+* Add Episodes to Podcasts
+* Like Songs, then print Favourites
+* Add Playlists, Albums, Podcasts to User
+* Play Songs
+*/
 
 public class Spotify{
   public static void main(String[] args) throws IOException{
@@ -173,7 +175,7 @@ public class Spotify{
       System.out.println(song.get(intCount).getName());
 
     }
-    
+
     System.out.println("Length: " + Me.getLikedSongs().findLength());
     System.out.println(" ");
 

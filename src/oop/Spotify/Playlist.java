@@ -5,8 +5,11 @@ import oop.Spotify.Song;
 import oop.Spotify.Songlist;
 import oop.Spotify.User;
 
+// Playlist class
+// is a Songlist(Inherits a bunch of methods)
+// Contains songs
+
 public class Playlist extends Songlist{
-  //private ArrayList<Song> Songs = new ArrayList<Song>();
 
   // Constructor
   public Playlist(String setName){
@@ -18,9 +21,7 @@ public class Playlist extends Songlist{
     return super.getSongs();
   }
 
-  public ArrayList addSong(Song newSong, Playlist list){
-    
-
+  public ArrayList addSong(Song newSong){
     return super.addSong(newSong);
   }
 

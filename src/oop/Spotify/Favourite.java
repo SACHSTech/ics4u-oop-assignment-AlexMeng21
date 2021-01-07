@@ -4,17 +4,23 @@ import java.io.*;
 import oop.Spotify.Playlist;
 import oop.Spotify.Song;
 
+// Favourites Playlist
+// is a Playlist
+// Favourite is automatically made when creating a new User
+// Contains songs
+
 public class Favourite extends Playlist{
-  private ArrayList <Song> Songs = new ArrayList <Song> ();
   public Favourite(){
     super("Favourites");
   }
 
   public ArrayList addSong(Song newSong, Favourite Favourites){
-    newSong.favourite(newSong, Favourites);
-    Songs = super.addSong(newSong);
+    if (newSong.getFav() == false) {
+      newSong.favourite(newSong, Favourites);
+    }
+
     Favourites.findLength();
-    return Songs;
+    return super.addSong(newSong);
   }
 
   public void removeSong(Song song){
@@ -38,6 +44,6 @@ public class Favourite extends Playlist{
   }
 
   public String toString(){
-    return super.getName() + " " + super.findLength() + " " + Songs;
+    return super.getName() + " " + super.findLength() + " " + super.getSongs();
   }
 }

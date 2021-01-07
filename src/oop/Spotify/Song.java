@@ -2,6 +2,9 @@ package oop.Spotify;
 import java.io.*;
 import oop.Spotify.Favourite;
 
+// Song class
+// Parent to Episode
+
 public class Song{
   private String name;
   private String artist;
@@ -10,19 +13,22 @@ public class Song{
   private String album;
   private String date;
 
-  public Song(String setName, String setArtist, String setLength, boolean isfavourite, String setAlbum, String setDate){
+  public Song(String setName, String setArtist, String setLength, String setAlbum, String setDate){
     name = setName;
     artist = setArtist;
     length = setLength;
-    favourite = isfavourite;
+    favourite = false;
     album = setAlbum;
     date = setDate;
   }
 
   public void favourite(Song song, Favourite fav){
-    if(favourite == false){
+    if (favourite == false) {
+      favourite = true;
       fav.addSong(song, fav);
+
     }
+    
     favourite = true;
   }
 

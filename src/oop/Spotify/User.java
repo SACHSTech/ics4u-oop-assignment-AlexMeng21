@@ -5,6 +5,10 @@ import oop.Spotify.Song;
 import oop.Spotify.Playlist;
 import oop.Spotify.Favourite;
 
+// User class
+// Contains list of added Playlists, Albums, Podcasts, and has it's own Favourite object
+// Favourites playlist is created when a new user is made
+
 public class User{
   private String username;
   private String password;
@@ -14,7 +18,7 @@ public class User{
   private ArrayList<Playlist> playlists = new ArrayList<Playlist>();
   private ArrayList<Album> Albums = new ArrayList<Album>();
   private ArrayList<Podcast> Podcasts = new ArrayList<Podcast>();
-  Favourite favourites = new Favourite();
+  private Favourite favourites = new Favourite();
 
   public User(String setUsername, String setPass){
     username = setUsername;
@@ -49,10 +53,13 @@ public class User{
   public void removePlaylist(Playlist list){
     int Counter;
     Playlist check;
-    for(Counter = 0; Counter < playlists.size(); Counter ++){
+
+    for (Counter = 0; Counter < playlists.size(); Counter ++) {
       check = playlists.get(Counter);
-      if(check == list){
+
+      if (check == list) {
         playlists.remove(Counter);
+
       }
 
     }
@@ -71,10 +78,13 @@ public class User{
   public void removeAlbum(Album album){
     int Counter;
     Album check;
-    for(Counter = 0; Counter < Albums.size(); Counter ++){
+
+    for (Counter = 0; Counter < Albums.size(); Counter ++) {
       check = Albums.get(Counter);
-      if(check == album){
+
+      if (check == album) {
         Albums.remove(Counter);
+
       }
 
     }
@@ -93,13 +103,24 @@ public class User{
     public void removePodcast(Podcast series){
     int Counter;
     Podcast check;
-    for(Counter = 0; Counter < Podcasts.size(); Counter ++){
+
+    for (Counter = 0; Counter < Podcasts.size(); Counter ++) {
       check = Podcasts.get(Counter);
-      if(check == series){
+
+      if (check == series) {
         Podcasts.remove(Counter);
+        
       }
 
     }
 
+  }
+
+  public Favourite getLikedSongs(){
+    return favourites;
+  }
+
+  public String toString(){
+    return username + " " + password + " " + favourites + " " + playlists + " " + Albums + " " + Podcasts;
   }
 }

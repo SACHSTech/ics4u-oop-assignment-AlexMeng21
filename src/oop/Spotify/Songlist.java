@@ -3,6 +3,10 @@ import oop.Spotify.Song;
 import java.util.ArrayList;
 import java.io.*;
 
+// Songlist class
+// Parent to Playlist, Album, grandparent? lol to Favourite and Podcast
+// Contains most of the methods for child classes
+
 public class Songlist{
   private String name;
   private String length = "00:00";
@@ -35,9 +39,9 @@ public class Songlist{
     int Counter;
     Song check;
 
-    for(Counter = 0; Counter < Songs.size(); Counter ++){
+    for (Counter = 0; Counter < Songs.size(); Counter ++) {
       check = Songs.get(Counter);
-      if(check == song){
+      if (check == song) {
         Songs.remove(Counter);
         break;
       }
@@ -58,13 +62,14 @@ public class Songlist{
 
     TotalLength = 0;
     
-    for(Counter = 0; Counter < Songs.size(); Counter ++){
+    for (Counter = 0; Counter < Songs.size(); Counter ++) {
       song = Songs.get(Counter);
       SLength = song.getLength();
       Minutes = Integer.parseInt(SLength.substring(0 , 2));
       Seconds = Integer.parseInt(SLength.substring(3 , 5)) + (Minutes * 60);
 
       TotalLength = TotalLength + Seconds;
+
     }
     
     Minutes = (int)(TotalLength / 60);
@@ -73,11 +78,11 @@ public class Songlist{
     strMin = Integer.toString(Minutes);
     strSec = Integer.toString(Seconds);
 
-    if(strMin.length() < 2){
+    if (strMin.length() < 2) {
       strMin = "0" + strMin;
     }
 
-    if(strSec.length() < 2){
+    if (strSec.length() < 2) {
       strSec = "0" + strSec;
     }
 
@@ -88,8 +93,9 @@ public class Songlist{
   public void Play(){
     int Counter;
 
-    for(Counter = 0; Counter < Songs.size(); Counter ++){
+    for (Counter = 0; Counter < Songs.size(); Counter ++) {
       System.out.println("Now Playing: " + Songs.get(Counter).getName());
+      
     }
 
   }

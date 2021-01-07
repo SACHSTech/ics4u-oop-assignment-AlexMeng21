@@ -3,13 +3,17 @@ import oop.Spotify.Song;
 import oop.Spotify.Songlist;
 import java.util.ArrayList;
 
+// Album class
+// is a Songlist
+// Contains songs
+// Also has a set artist
+
 public class Album extends Songlist{
   private String artist;
-  private ArrayList <Song> Songs = new ArrayList<Song>();
   
   // Constructor
   public Album(String setName, String setArtist){
-    super(setName);
+    super (setName);
     artist = setArtist;
   }
 
@@ -22,12 +26,11 @@ public class Album extends Songlist{
   }
 
   public ArrayList addSong(Song newSong){
-    Songs = super.addSong(newSong);
-    return Songs;
+    return super.addSong(newSong);
   }
 
   public ArrayList getSongs(){
-    return Songs;
+    return super.getSongs();
   }
 
   public String findLength(){
@@ -39,7 +42,7 @@ public class Album extends Songlist{
   }
 
   public String toString(){
-    return super.getName() + " " + artist + " " + super.findLength() + " " + Songs;
+    return super.getName() + " " + artist + " " + super.findLength() + " " + super.getSongs();
   } 
 
 }

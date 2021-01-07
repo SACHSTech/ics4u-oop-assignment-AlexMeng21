@@ -2,11 +2,16 @@ package oop.Spotify;
 import java.io.*;
 import oop.Spotify.Song;
 
+// Episode class
+// is a Song
+// No favourite
+// Has a description and a producer instead of artist
+
 public class Episode extends Song{
   private String description;
 
-  public Episode(String setName, String setProducer, String setLength, boolean isfavourite, String setPodcast, String setDate, String setDescription){
-    super(setName, setProducer, setLength, isfavourite, setPodcast, setDate);
+  public Episode(String setName, String setProducer, String setLength, String setPodcast, String setDate, String setDescription){
+    super (setName, setProducer, setLength, setPodcast, setDate);
     description = setDescription;
   }
 

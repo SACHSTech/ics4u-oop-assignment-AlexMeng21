@@ -3,7 +3,14 @@
 
 [*see instructions for details*](Instructions.md)
 
-*Insert Class Diagram here*  
+*Insert Class Diagram here*
+Class Diagram is one file above ^^ labled OOP Assignment.jpg
+I've also turned it in on google classroom.
 
 ## Summary
-*Include a brief summary that describes your system that your are modelling*
+### Spotify:
+&nbsp &nbsp &nbsp Main object, User is composed of many other objects, which are also made of other objects. User class contains Albums, Playlists, Podcasts, etc.
+
+&nbsp &nbsp &nbsp Playlists, Albums and Podcasts are also made up of Songs and it's child class, Episodes. All list type classes fall under the Songlist class. The User class also has its own special playlist called favourites, which stores songs when the user likes them.
+
+&nbsp &nbsp &nbsp Songs and Episodes can be added to Playlists, Albums, and Podcasts. All list type classes recalculate their length every time a new song is added.
